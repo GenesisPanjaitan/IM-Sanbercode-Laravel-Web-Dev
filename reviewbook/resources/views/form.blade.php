@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Form</title>
-</head>
-<body>
-    <h1>Buat Account Baru!</h1>
-    <h2>Sign Up Form</h2>
+@extends('layouts.master')
+
+@section('title')
+    REGISTER
+@endsection
+
+@section('content')
     <form action="/welcome" method="post">
         @csrf
         <label>First Name:</label><br>
@@ -18,7 +15,7 @@
         <input type="radio" name="gender"> Male<br>
         <input type="radio" name="gender"> Female<br>
         <input type="radio" name="gender"> Other<br><br>
-        <label>Nationality:</label>
+        <label>Nationality:</label><br>
         <select name="nationality">
             <option value="">Indonesian</option>
             <option value="">Malaysian</option>
@@ -33,5 +30,4 @@
         <textarea rows="10" cols="30"></textarea><br><br>
         <input type="submit" value="Sign Up">
     </form>
-</body>
-</html>
+@endsection
